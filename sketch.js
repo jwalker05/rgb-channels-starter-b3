@@ -1,41 +1,46 @@
-var lpkidsred;
-var lpkidsgreen;
-var lpkidsblue;
-var lpkidsgray;
+var redPicture;
+var greenPicture;
+var bluePicture;
+var grayPicture;
+var television;
 
 function preload(){
-    lpkidsgray = loadImage("images/lpkids-gray.png");
-    lpkidsred = loadImage("images/lpkids-red.png");
-    lpkidsgreen = loadImage("images/lpkids-green.png");
-    lpkidsblue = loadImage("images/lpkids-blue.png");
+    redPicture = loadImage("images/lpkids-red.png");
+    greenPicture= loadImage("images/lpkids-green.png");
+    bluePicture = loadImage("images/lpkids-blue.png");
+    grayPicture=  loadImage("images/lpkids-gray.png");
+    television =  loadImage("images/OLD-SCHOOL-TV.png");
 }
 
 function setup(){
-    createCanvas(500,374);
+    createCanvas(749,524);
 }
 
 function draw(){
+   
+    
     if(keyIsPressed){
         if(key=="r"){
-            image(lpkidsred, 0, 0);
+            image(redPicture, 50, 50);
         }
         if(key=="g"){
-            image(lpkidsgreen, 0, 0);
+            image(greenPicture, 50, 50);
         }
         if(key=="b"){
-            image(lpkidsblue, 0, 0);
+            image(bluePicture, 50, 50);
         }
         if(keyCode=="32"){
             fill(0);
-            rect(0, 0, 500, 374);
+            rect(50, 50, 500, 374);
             blendMode(LIGHTEST);
-            image(lpkidsred,0,0);
-            image(lpkidsgreen,0,0);
-            image(lpkidsblue,0,0);
+            image(Ipkidsred,50,50);
+            image(Ipkidsgreen,50,50);
+            image(Ipkidsblue,50,50);
         }
     }
     else{
-        blendMode(NORMAL);
-        image(lpkidsgray,0,0);
+        image(lpkids-gray,100,100);
     }
+    blendMode(NORMAL);
+      image(television, 0, 0);
 }
